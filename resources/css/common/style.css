@@ -1,0 +1,18 @@
+/* Table hover effect */
+.table-hover tbody tr:hover {
+    background-color: #f1f8ff;
+    transform: translateX(2px);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Action buttons */
+.btn-outline-warning:hover {
+    background-color: #ffc107;
+    color: white;
+    border-color: #ffc107;
+}
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
