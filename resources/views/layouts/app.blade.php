@@ -69,7 +69,6 @@
         {{-- <a href="/" class="nav-link {{ request()->is('/') ? 'active' : '' }}">
             <i class="bi bi-house-door-fill me-2"></i> Dashboard
         </a> --}}
-        @if(auth()->check() && auth()->user()->role_id === 1)
             <a href="/students" class="nav-link {{ request()->is('students*') ? 'active' : '' }}">
                 <i class="bi bi-people-fill me-2"></i> Students
             </a>
@@ -82,12 +81,9 @@
             <a href="/courses" class="nav-link {{ request()->is('courses*') ? 'active' : '' }}">
                 <i class="bi bi-journal-bookmark-fill me-2"></i> Courses
             </a>
-        @endif
-        @if(auth()->check() && in_array(auth()->user()->role_id, [1,2]))
             <a href="/enrollments" class="nav-link {{ request()->is('enrollments*') ? 'active' : '' }}">
                 <i class="bi bi-card-checklist me-2"></i> Enrollments
             </a>
-        @endif
     </div>
 </div>
 
